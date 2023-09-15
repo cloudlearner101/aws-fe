@@ -1,0 +1,5 @@
+window.CMN_CONFIG = {
+    username: '${Username}',
+    password: '${Password}',
+   
+  };

@@ -1,0 +1,416 @@
+/* style.css */
+html body {
+  background-color: rgb(237 237 245);
+  font-family: var(--font_family);
+  font-size: 13px;
+  margin: 0; /* Remove default margin */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensure the body takes at least the viewport height */
+}
+
+.main_header_style {
+  background-color: #04455e;
+  min-height: 20px;
+  color: azure;
+
+  .mdl-layout__header-row {
+    padding: 0px 0px 0px 10px;
+    height: 45px;
+    text-align: center;
+    font-size: 45px;
+  }
+
+  .mdl-layout__header-row button {
+    height: 45px;
+    background-color: transparent;
+    color: var(--primary_btn_color);
+    text-transform: capitalize;
+    padding: 0 10px;
+  }
+}
+
+.footer {
+  padding: 15px 15px; /* Adjust padding as needed */
+  background-color: #04455e;
+  color: var(--footer_text_color); /* Set text color */
+  text-align: center; /* Center align the content within the footer */
+  position: sticky;
+  bottom: 0; /* Stick the footer to the bottom of the viewport */
+  width: 100%; /* Ensure the footer spans the entire width */
+}
+
+.login-container {
+  background-image: url('../Img/img.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Align content to the top of the container */
+  padding-top: 20px; /* Add padding to create space from the top */
+}
+
+
+.logindiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px auto;
+  padding-right: 30px;
+  width: 300px;
+  padding: 30px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #0285a9f5;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Header styles */
+.login-h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Label styles */
+.login-label {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+/* Input styles */
+.login-input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  font-size: 16px;
+}
+
+/* Button styles */
+.login-button {
+  background-color: #28323c;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.login-button:hover {
+  background-color: #0056b3;
+}
+
+/* Error message styles */
+.login-error {
+  color: #ff0000;
+  font-size: 14px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+
+.custom_paper.MuiPaper-root {
+  box-shadow: none;
+  background-color: transparent;
+}
+
+.custom_paper {
+  width: 100%;
+  margin-bottom: 5px;
+  box-shadow: none;
+
+  .tableWrapper {
+    padding: 0 20px;
+    overflow-X: auto;
+    margin-top: 0px;
+
+    table.wordEllipsis td {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    table {
+      min-width: 500px;
+      border-collapse: separate;
+      border-spacing: 0 0.6em;
+
+      .MuiTableCell-root {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        max-width: 300px;
+        word-wrap: break-word;
+        border: 0px;
+        font-size: 12px;
+
+      }
+
+      .MuiTableCell-head {
+        color:   var(--table_header_text_color);
+        text-transform: uppercase;
+        padding-top: 5px;
+        padding-bottom: 5px;
+      }
+
+      thead.MuiTableHead-root {
+        background-color: transparent;
+      }
+
+      tbody {
+        tr.MuiTableRow-root {
+          background-color:   var(--table_row_bgcolor);
+        }
+
+        tr.MuiTableRow-root.MuiTableRow-hover:hover {
+          background-color:   var(--table_row_bgcolor_hover)
+        }
+
+        td:first-child {
+          border-top-left-radius: 6px;
+          border-bottom-left-radius: 6px;
+        }
+
+        td:last-child {
+          border-top-right-radius: 6px;
+          border-bottom-right-radius: 6px;
+        }
+
+        .MuiTableCell-body,
+        tr td.MuiTableCell-root a i,
+        tr td.MuiTableCell-root button i {
+          color: #57606F;
+        }
+
+        .btn.disabled,
+        .btn[disabled],
+        fieldset[disabled] .btn {
+          opacity: 0.15;
+        }
+
+        tr td.MuiTableCell-root button {
+          background: none;
+        }
+
+        tr:hover td.MuiTableCell-root,
+        tr:hover td.MuiTableCell-root a i,
+        tr:hover td.MuiTableCell-root button i {
+          color:   var(--theme_background_color);
+        }
+
+        td .form-control,
+        td .MuiCheckbox-root {
+          color: inherit;
+        }
+      }
+    }
+  }
+}
+
+.table_NoData_style {
+  color: #337ab7 !important;
+  text-align: center !important;
+  font-weight: 500 !important;
+  font-size: 1.1em !important;
+}
+
+.right-panel-action {
+  text-align: right;
+  padding: 0px
+}
+
+
+
+.mr5 {
+  margin-right: 12px;
+    border: solid;
+    border-color: cadetblue;
+    background-color: #57b2b3;
+    border-radius: 15px
+}
+
+.mr5:hover{
+  cursor: pointer;
+}
+
+.para-style{
+  font-size: 20px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+
+.dhpc-style{
+  font-size: 25px;
+  font-family: serif;
+  margin-top: 0px;
+  padding-top: 3px;
+  margin-bottom: 0px
+}
+
+
+.dashboard-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.text-boxes {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; /* Align text boxes to the right */
+  padding: 20px; /* Adjust padding as needed */
+  background-color: #f0f0f0; /* Change background color as needed */
+}
+
+.text-box {
+  margin-bottom: 20px; /* Add spacing between text boxes */
+}
+
+
+.step {
+  background-color:   var(--frame_backgound_color);
+  min-height: 115px;
+  padding: 20px;
+  box-shadow: 2px 2px 3px 0px #999;
+  display: flow-root;
+  margin-bottom: 0px;
+}
+
+
+.date-label{
+  font-size: 15px;
+}
+
+.ilms-heading{
+  font-size: 20px;
+  color: black;
+  margin-top: -4px;
+
+}
+
+.text-box {
+  width: 100%;
+}
+
+.flex-container {
+  display: flex;
+  
+}
+
+.flex-container > div {
+  margin: 0px;
+  padding: 0px;
+  font-size: 30px;
+}
+
+.date-input-container {
+  display: flex;
+  align-items: center;
+  width: 25%;
+}
+
+.date-label {
+  margin-right: 45px; 
+  width: 100%;
+}
+
+.form-control {
+  width: 100%; /* Ensure the input takes up the available width */
+  height: 25px;
+  color: #3f2373;
+  background-color: #a0bfda;
+  font-size: 18px;
+}
+
+.flex2 {
+  
+  
+  background-color: green;
+}
+
+.Lessee-label{
+  font-size: 15px;
+  width: 100px;
+  margin-left: 345px
+}
+
+.date-input-container3 {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.date-input-container4 {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.Lessee-label-name{
+  font-size: 15px;
+  width: 100px;
+  margin-left: 650px;
+}
+
+.Lessee-label-bulk-code{
+  font-size: 15px;
+  width: 100px;
+  margin-left: 650px
+}
+
+.table-head{
+  background-color: #0056b3;
+}
+
+.table-flex{
+  display: flex;
+  width: 100%;
+}
+
+.main-dhpc-export{
+  width: 100%;
+}
+
+.mr-start-date {
+  margin-right: 15px;
+    border: solid;
+    border-color: cadetblue;
+    background-color: #57b2b3;
+    border-radius: 0px;
+    padding: 5px
+}
+
+.mr-end-date {
+  margin-right: 15px;
+    border: solid;
+    border-color: cadetblue;
+    background-color: #57b2b3;
+    border-radius: 0px;
+    padding: 5px
+}
+
+.mr-submit{
+  margin-right: 15px;
+  border: solid;
+  border-color: cadetblue;
+  background-color: #57b2b3;
+  border-radius: 15px;
+  padding: 2px
+}
+
+.dashboard-total-weight{
+  display: flex;
+}
+
+.total-text{
+  background-color:   var(--frame_backgound_color);
+  margin-top: 9px;
+  margin-bottom: 9px;
+  margin-left: -21px;
+}
