@@ -11,8 +11,12 @@ class MainFooter extends React.Component {
         const { t } = this.props;
         
         return (
-            <Footer  className="footer">
-               
+            <Footer className="main_footer_style">
+               <FooterSection type="left">
+                    <FooterLinkList>
+                       <label><i>"Powered by : NexInvent Technologies Pvt Ltd"</i></label> 
+                    </FooterLinkList>
+                </FooterSection>
             </Footer>
         );
     }

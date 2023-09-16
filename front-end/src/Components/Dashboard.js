@@ -49,7 +49,7 @@ class Dashboard extends Component {
         'Access-Control-Allow-Origin': '*'
       }
     };
-    fetch(`${process.env.REACT_APP_API_URL}/fetchAll`).then((response) => response.json()).then((response) => {
+    fetch(`${process.env.REACT_APP_API_URL}/DHPC/fetchAll`).then((response) => response.json()).then((response) => {
       if (this._mounted) {
         if (response) {
          
@@ -77,7 +77,7 @@ class Dashboard extends Component {
         'Access-Control-Allow-Origin': '*'
       }
     };
-    fetch(`${process.env.REACT_APP_API_URL}/fetchByDate?startDate=${sDate}&endDate=${eDate}`,payload).then((response) => response.json()).then((response) => {
+    fetch(`${process.env.REACT_APP_API_URL}/DHPC/fetchByDate?startDate=${sDate}&endDate=${eDate}`,payload).then((response) => response.json()).then((response) => {
         if (response) {
           this.setState({ data: response.data})
           this.addNetWeight();

@@ -30,14 +30,15 @@ html body {
   }
 }
 
-.footer {
-  padding: 15px 15px; /* Adjust padding as needed */
+.main_footer_style {
+  padding: -1px 15px;
   background-color: #04455e;
-  color: var(--footer_text_color); /* Set text color */
-  text-align: center; /* Center align the content within the footer */
-  position: sticky;
-  bottom: 0; /* Stick the footer to the bottom of the viewport */
-  width: 100%; /* Ensure the footer spans the entire width */
+  color: azure;
+  position: relative;
+  z-index: 99;
+  bottom: 0; 
+  width: 100%;
+
 }
 
 .login-container {
@@ -291,6 +292,7 @@ html body {
   font-size: 20px;
   color: black;
   margin-top: -4px;
+  font-weight: bold;
 
 }
 
@@ -413,4 +415,17 @@ html body {
   margin-top: 9px;
   margin-bottom: 9px;
   margin-left: -21px;
+}
+
+.logout-button{
+  position: absolute;
+    right: 0;
+    top: 8px;
+    margin: 4px;
+    background-color: #b8f0ff;
+    border-radius: 2px;
+    font-weight: bold;
+}
+.login-button:hover{
+  cursor: pointer;
 }

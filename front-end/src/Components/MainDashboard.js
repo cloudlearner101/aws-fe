@@ -10,7 +10,8 @@ class MainDashboard extends Component {
       currentDateTime: new Date(),
       lesseeCode : process.env.REACT_APP_LESSECODE,
       lesseeName : process.env.REACT_APP_LESSENAME,
-      bulkPermitCode : process.env.REACT_APP_BULKPERMITCODE
+      bulkPermitCode : process.env.REACT_APP_BULKPERMITCODE,
+      redirectToLogin : false
     };
   }
 
@@ -20,17 +21,23 @@ class MainDashboard extends Component {
     // }, 1000);
   }
 
+  handleLogout = () => {
+
+    localStorage.removeItem('isAuthenticated');
+    this.props.navigate('/login');
+  };
+
   componentWillUnmount() {
     clearInterval(this.intervalID);
   }
 
   render() {
     const { isAuthenticated, currentDateTime } = this.state;
-console.log(isAuthenticated)
     if (!isAuthenticated) {
       return (
         <div>
-          <h1>Authentication failed. Please log in.</h1>
+          <h1>Authentication failed. Please provide valid credentials.</h1>
+          {this.handleLogout()}
         </div>
       );
     }
@@ -40,6 +47,10 @@ console.log(isAuthenticated)
         
         <div className="row step">
           <label className="ilms-heading">ILMS Connection Status</label>
+
+          {this.props.isAuthenticated && (
+          <button className="logout-button" onClick={this.handleLogout}>Logout</button>
+        )}
           <div
             class="flex-container"
             style={{ display: 'flex', justifyContent: 'space-between' }}
@@ -99,7 +110,6 @@ console.log(isAuthenticated)
     />
   </div>
 </div>
-
         </div>
 
         <Dashboard />
