@@ -18,7 +18,7 @@ html body {
     padding: 0px 0px 0px 10px;
     height: 45px;
     text-align: center;
-    font-size: 45px;
+    font-size: 30px;
   }
 
   .mdl-layout__header-row button {
@@ -38,11 +38,11 @@ html body {
   z-index: 99;
   bottom: 0; 
   width: 100%;
-
+  margin-bottom: -14px;
 }
 
 .login-container {
-  background-image: url('../Img/img.jpg');
+  background-image: url('../Img/demo.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -77,6 +77,7 @@ html body {
 
 /* Label styles */
 .login-label {
+  font-weight: bolder;
   font-size: 16px;
   margin-bottom: 8px;
 }
@@ -84,7 +85,7 @@ html body {
 /* Input styles */
 .login-input {
   width: 100%;
-  padding: 10px;
+  height: 30px;
   margin-bottom: 15px;
   border: 1px solid #ccc;
   border-radius: 3px;
@@ -222,7 +223,7 @@ html body {
 
 .right-panel-action {
   text-align: right;
-  padding: 0px
+  padding: 5px
 }
 
 
@@ -240,15 +241,15 @@ html body {
 }
 
 .para-style{
-  font-size: 20px;
     margin-top: 0px;
     margin-bottom: 0px;
 }
 
 
 .dhpc-style{
-  font-size: 25px;
-  font-family: serif;
+  font-weight: bolder;
+  font-size: 20px;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   margin-top: 0px;
   padding-top: 3px;
   margin-bottom: 0px
@@ -285,15 +286,21 @@ html body {
 
 
 .date-label{
-  font-size: 15px;
+  font-size: 14px;
 }
 
-.ilms-heading{
-  font-size: 20px;
-  color: black;
-  margin-top: -4px;
-  font-weight: bold;
+.date-label-total{
+  margin-right: 30px;
+  font-size: 14px;
+}
 
+.h2-ilms {
+  font-weight: bolder;
+  font-size: 20px;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  margin-top: 0px;
+  padding-top: 3px;
+  margin-bottom: 0px
 }
 
 .text-box {
@@ -323,11 +330,14 @@ html body {
 }
 
 .form-control {
-  width: 100%; /* Ensure the input takes up the available width */
+  padding-left: 10px;
+  width: 90%; /* Ensure the input takes up the available width */
   height: 25px;
-  color: #3f2373;
-  background-color: #a0bfda;
-  font-size: 18px;
+  background-color: #ccc;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 14px;
+  color: #000000;
 }
 
 .flex2 {
@@ -337,7 +347,7 @@ html body {
 }
 
 .Lessee-label{
-  font-size: 15px;
+  font-size: 14px;
   width: 100px;
   margin-left: 345px
 }
@@ -355,19 +365,23 @@ html body {
 }
 
 .Lessee-label-name{
-  font-size: 15px;
+  font-size: 14px;
   width: 100px;
   margin-left: 650px;
 }
 
 .Lessee-label-bulk-code{
-  font-size: 15px;
+  font-size: 14px;
   width: 100px;
   margin-left: 650px
 }
 
 .table-head{
-  background-color: #0056b3;
+  background-color: #04455e;
+}
+
+table .MuiTableCell-head {
+  color: white;
 }
 
 .table-flex{
@@ -388,22 +402,47 @@ html body {
     padding: 5px
 }
 
-.mr-end-date {
-  margin-right: 15px;
-    border: solid;
-    border-color: cadetblue;
-    background-color: #57b2b3;
-    border-radius: 0px;
-    padding: 5px
+/* Style the date input box */
+input[type="date"] {
+  padding: 5px;
+  padding-left: 8px;
+  padding-right: 8px;
+  border: 1px solid #ccc;
+  border-radius: 25px;
+  color: #333;
 }
 
+/* Style the date picker icon (browser-specific) */
+input[type="date"]::-webkit-calendar-picker-indicator {
+  background-color: #ffffff; /* Change the color of the calendar picker icon in Webkit browsers */
+  color: #fff; /* Change the color of the icon's text in Webkit browsers */
+}
+
+/* Style the date picker icon (Firefox) */
+input[type="date"]::-moz-calendar-picker-indicator {
+  background-color: #ffffff; /* Change the color of the calendar picker icon in Firefox */
+  color: #fff; /* Change the color of the icon's text in Firefox */
+}
+
+/* Style the date picker icon (Edge and IE) */
+input[type="date"]::-ms-clear {
+  display: none; /* Hide the clear button in Edge and IE */
+}
+
+
 .mr-submit{
-  margin-right: 15px;
-  border: solid;
-  border-color: cadetblue;
-  background-color: #57b2b3;
-  border-radius: 15px;
-  padding: 2px
+  background-color: #57b2b3; /* Button background color */
+  color: #fff; /* Button text color */
+  border: none; /* Remove button border */
+  padding: 5px 10px; /* Button padding (adjust as needed) */
+  border-radius: 25px; /* Button border radius for rounded corners */
+  font-size: 14px; /* Button text size */
+  cursor: pointer; /* Change cursor to a pointer on hover */
+  transition: background-color 0.3s ease; /* Smooth background color transition on hover */
+}
+
+.mr-submit:hover{
+  background-color: #04455e; /* Change background color on hover */
 }
 
 .dashboard-total-weight{
@@ -411,21 +450,71 @@ html body {
 }
 
 .total-text{
-  background-color:   var(--frame_backgound_color);
-  margin-top: 9px;
+  padding-left: 5px;
+  background-color: #ccc;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  color: #000000;
+  border-radius: 10px;
+  margin-top: 15px;
   margin-bottom: 9px;
   margin-left: -21px;
+  height: 25px;
 }
 
-.logout-button{
+.logout-button {
   position: absolute;
-    right: 0;
-    top: 8px;
-    margin: 4px;
-    background-color: #b8f0ff;
-    border-radius: 2px;
-    font-weight: bold;
+  right: 0;
+  top: 3px;
+  margin: 4px;
+  background-color: #57b2b3; /* Red background color */
+  color: white; /* White text color */
+  padding: 5px 15px; /* Padding around the text */
+  border: none; /* Remove the button border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Cursor style on hover */
+  font-size: 16px; /* Font size */
+} 
+
+.logout-button:hover{
+  background-color: #cce8f3; /* Change background color on hover */
+  color: black;
+  font-weight: bolder;
 }
+
 .login-button:hover{
   cursor: pointer;
+}
+
+/* Webkit-based browsers (Chrome, Safari) */
+/* Customize the track and thumb appearance */
+::-webkit-scrollbar {
+  width: 12px; /* Set the width of the scrollbar */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #555; /* Color of the thumb */
+  border-radius: 6px; /* Rounded corners for the thumb */
+}
+
+::-webkit-scrollbar-track {
+  background-color: #eee; /* Color of the track */
+}
+
+/* Customize the thumb appearance in Firefox */
+/* The thumb color */
+::-webkit-scrollbar-thumb {
+  background-color: #555;
+  border-radius: 6px;
+}
+
+/* The track color */
+::-webkit-scrollbar-track {
+  background-color: #eee;
+}
+
+/* Hide the scrollbar corner in Firefox */
+/* This is a small corner area where both the horizontal and vertical scrollbars meet */
+::-webkit-scrollbar-corner {
+  display: none;
 }

@@ -46,7 +46,7 @@ class MainDashboard extends Component {
       <div>
         
         <div className="row step">
-          <label className="ilms-heading">ILMS Connection Status</label>
+          <label className="h2-ilms">ILMS CONNECTION STATUS</label>
 
           {this.props.isAuthenticated && (
           <button className="logout-button" onClick={this.handleLogout}>Logout</button>
