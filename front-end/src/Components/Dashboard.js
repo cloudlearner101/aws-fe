@@ -49,7 +49,7 @@ class Dashboard extends Component {
         'Access-Control-Allow-Origin': '*'
       }
     };
-    fetch(`${process.env.REACT_APP_API_URL}/fetchAll`).then((response) => response.json()).then((response) => {
+    fetch(`${process.env.REACT_APP_API_URL}/DHPC/fetchAll`).then((response) => response.json()).then((response) => {
       if (this._mounted) {
         if (response) {
          
@@ -77,7 +77,7 @@ class Dashboard extends Component {
         'Access-Control-Allow-Origin': '*'
       }
     };
-    fetch(`${process.env.REACT_APP_API_URL}/fetchByDate?startDate=${sDate}&endDate=${eDate}`,payload).then((response) => response.json()).then((response) => {
+    fetch(`${process.env.REACT_APP_API_URL}/DHPC/fetchByDate?startDate=${sDate}&endDate=${eDate}`,payload).then((response) => response.json()).then((response) => {
         if (response) {
           this.setState({ data: response.data})
           this.addNetWeight();
@@ -237,7 +237,7 @@ class Dashboard extends Component {
             type='date'
             value={this.state.startDate}
             onChange={this.handleStartDateChange}
-            className="mr-end-date"
+            className="date-input"
           />
         </div>
         <div className="right-panel-action">
@@ -245,7 +245,7 @@ class Dashboard extends Component {
             type='date'
             value={this.state.endDate}
             onChange={this.handleEndDateChange}
-            className="mr-end-date"
+            className="date-input"
           />
         </div>
               <div className="right-panel-action">
@@ -255,7 +255,7 @@ class Dashboard extends Component {
               </div>
               <div style={{ flex: '-1 1 10%' }} />
               <div className="right-panel-action">
-                <button type="button" className="btn btn-sm btn-default mr5" onClick={() => this.handleExportClick()}>
+                <button type="button" className="mr-submit" onClick={() => this.handleExportClick()}>
                   <p className='para-style'>Export</p>
                 </button>
               </div>
@@ -344,7 +344,7 @@ class Dashboard extends Component {
           
             <div className='dashboard-total-weight'>
               <Typography variant="h6" id="tableTitle">
-                <p className="date-label">Total Net Weight(In MT):</p>
+                <p className="date-label-total">Total Net Weight <span style={{ fontSize: 10}}> (In MT)</span>:</p>
               </Typography>
               
               <input

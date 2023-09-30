@@ -13,7 +13,7 @@ class MainHeader extends React.Component {
     
 
         return (
-            <Header title={"Down Hill Pipeline Conveyor"} className="main_header_style">
+            <Header title={"DOWN HILL PEIPELINE CONVEYOR"} style={{ fontWeight: "bold" }} className="main_header_style">
                 
             </Header>
         );
